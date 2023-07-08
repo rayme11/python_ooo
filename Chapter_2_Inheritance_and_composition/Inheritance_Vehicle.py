@@ -7,10 +7,10 @@ class Vehicle:
     def getname(self):
         return self.name
 
-    def getShape(self):
+    def getshape(self):
         return self.shape
 
-    def getTechnology(self):
+    def gettechnology(self):
         return self.technology
 
 
@@ -32,6 +32,9 @@ class Boat(Vehicle):
     def gettravelDistance(self):
         return self.travelDistance
 
+    def getSpeed(self):
+        return  self.knotsVelocity
+
 
 # Instantiate a new object from Airplane that inherits from Vehicle
 
@@ -39,3 +42,7 @@ boeing = Airplane("Boeing 727", "Linear", "Hybrid", 300)
 print('Boing Vehicle has ' + str(boeing.getSeatingCapacity()) + ' seats ')
 print('Boeing Vehcile nas name of: ', boeing.getname())
 print('Boeing is class of ', type(boeing))
+
+hondaBoat = Boat("Royal American", "Linear", "Nuclear", 40, 600)
+print('Boat name is: ' , hondaBoat.getname())
+print('Boat can travel at ' , hondaBoat.getSpeed(), ' miles per hour')
